@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício requisições HTTP</title>
+    <script type="module" src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="transaction-inputs">
+      Inserir uma nova transação:
+      <br />
+      <input type="text" id="description" placeholder="Descrição" />
+      <br />
+      <input type="number" id="value-transaction" placeholder="Valor (BRL)" />
+      <br />
+      <button id="btn-send-value">Enviar</button>
+    </div>
+    <br />
+    <button id="show-extract">Exibir Extrato</button>
+    <br />
+    <br />
+    <div id="transaction-list"></div>
+  </body>
+</html>
