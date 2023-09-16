@@ -1,4 +1,4 @@
-import { transactionList, btnShowExtract } from "./index.js";
+import { transactionList, btnShowExtract, showTotalValueDiv } from "./index.js";
 import { doNotHideList } from "./postRequest.js";
 
 export let functionCalled = false; // variável para saber se a função showTransactions foi chamada
@@ -50,6 +50,11 @@ export async function showTransactions() {
   // soma todos os valores da array
   totalValue = totalArray.reduce((acumulator, element) => acumulator + element);
   console.log(totalValue);
+
+  const showTotalValue = document.createElement("div");
+  showTotalValue.classList.add("extract");
+  showTotalValue.innerHTML = "Saldo Total: R$" + totalValue;
+  showTotalValueDiv.appendChild(showTotalValue);
 
   // alternar a opção do botão btnShowExtract entre ocultar / exibir
   if (doNotHideList) {
