@@ -9,5 +9,3 @@ export const btnShowExtract = document.getElementById("show-extract");
 
 btnSendValue.addEventListener("click", postRequest);
 btnShowExtract.addEventListener("click", showTransactions);
-
-// teste
