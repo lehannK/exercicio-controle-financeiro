@@ -1,4 +1,10 @@
-import { transactionList, btnShowExtract, showTotalValueDiv } from "./index.js";
+import {
+  transactionList,
+  btnShowExtract,
+  showTotalValueDiv,
+  deleteTextDiv,
+  deleteInput,
+} from "./index.js";
 import { doNotHideList } from "./postRequest.js";
 
 export let functionCalled = false; // variável para saber se a função showTransactions foi chamada
@@ -55,6 +61,16 @@ export async function showTransactions() {
   showTotalValue.classList.add("extract");
   showTotalValue.innerHTML = "Saldo Total: R$" + totalValue;
   showTotalValueDiv.appendChild(showTotalValue);
+
+  const deleteText = document.createElement("div");
+  deleteText.classList.add("extract");
+  deleteText.innerHTML = "Deletar uma transação";
+  deleteTextDiv.appendChild(deleteText);
+
+  const deleteInputValue = document.createElement("input");
+  deleteInputValue.classList.add("extract");
+  deleteInputValue.placeholder = "Insira o ID da transação";
+  deleteInput.appendChild(deleteInputValue);
 
   // alternar a opção do botão btnShowExtract entre ocultar / exibir
   if (doNotHideList) {

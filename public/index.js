@@ -9,6 +9,8 @@ export const btnShowExtract = document.getElementById("show-extract");
 export const showTotalValueDiv = document.getElementById(
   "show-total-value-div"
 );
+export const deleteTextDiv = document.getElementById("delete-text-div");
+export const deleteInput = document.getElementById("delete-input");
 
 btnSendValue.addEventListener("click", postRequest);
 btnShowExtract.addEventListener("click", showTransactions);
