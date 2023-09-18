@@ -4,8 +4,11 @@ import {
   showTotalValueDiv,
   deleteTextDiv,
   deleteInput,
+  deleteBtnDiv,
 } from "./index.js";
 import { doNotHideList } from "./postRequest.js";
+
+// export const deleteInputValue = undefined;
 
 export let functionCalled = false; // variável para saber se a função showTransactions foi chamada
 
@@ -71,6 +74,11 @@ export async function showTransactions() {
   deleteInputValue.classList.add("extract");
   deleteInputValue.placeholder = "Insira o ID da transação";
   deleteInput.appendChild(deleteInputValue);
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("extract");
+  deleteBtn.innerHTML = "Deletar";
+  deleteBtnDiv.appendChild(deleteBtn);
 
   // alternar a opção do botão btnShowExtract entre ocultar / exibir
   if (doNotHideList) {

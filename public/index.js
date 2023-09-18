@@ -11,6 +11,7 @@ export const showTotalValueDiv = document.getElementById(
 );
 export const deleteTextDiv = document.getElementById("delete-text-div");
 export const deleteInput = document.getElementById("delete-input");
+export const deleteBtnDiv = document.getElementById("delete-btn-div");
 
 btnSendValue.addEventListener("click", postRequest);
 btnShowExtract.addEventListener("click", showTransactions);
