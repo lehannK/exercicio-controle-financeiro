@@ -7,6 +7,7 @@ import {
   deleteBtnDiv,
 } from "./index.js";
 import { doNotHideList } from "./postRequest.js";
+import { doNotHideList2 } from "./deleteTransaction.js";
 import { deleteTransaction } from "./deleteTransaction.js";
 
 // export const deleteInputValue = undefined;
@@ -88,7 +89,7 @@ export async function showTransactions() {
   });
 
   // alternar a opção do botão btnShowExtract entre ocultar / exibir
-  if (doNotHideList) {
+  if (doNotHideList && doNotHideList2) {
     functionCalled = !functionCalled;
 
     if (functionCalled) {
