@@ -14,7 +14,7 @@ export async function deleteTransaction(idValue) {
   if (functionCalled) {
     doNotHideList2 = false;
     setTimeout(() => {
-      doNotHideList = true;
+      doNotHideList2 = true;
     }, 1000);
     showTransactions();
   }
