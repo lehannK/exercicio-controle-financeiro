@@ -14,8 +14,8 @@ import { deleteTransaction } from "./deleteTransaction.js";
 export let functionCalled = false; // variável para saber se a função showTransactions foi chamada
 
 // variáveis para cálculo de saldo total
-let totalArray = [];
-let totalValue = 0;
+export let totalArray = [];
+export let totalValue = 0;
 
 export async function showTransactions() {
   // necessário zerar a array a cada chamada para ela não somar os valores indefinidamente
