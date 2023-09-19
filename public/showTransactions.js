@@ -7,6 +7,7 @@ import {
   deleteBtnDiv,
 } from "./index.js";
 import { doNotHideList } from "./postRequest.js";
+import { deleteTransaction } from "./deleteTransaction.js";
 
 // export const deleteInputValue = undefined;
 
@@ -71,6 +72,7 @@ export async function showTransactions() {
   deleteTextDiv.appendChild(deleteText);
 
   const deleteInputValue = document.createElement("input");
+  deleteInputValue.type = "number";
   deleteInputValue.classList.add("extract");
   deleteInputValue.placeholder = "Insira o ID da transação";
   deleteInput.appendChild(deleteInputValue);
@@ -79,6 +81,11 @@ export async function showTransactions() {
   deleteBtn.classList.add("extract");
   deleteBtn.innerHTML = "Deletar";
   deleteBtnDiv.appendChild(deleteBtn);
+
+  // envia o ID selecionado para a função deleteTransactions
+  deleteBtn.addEventListener("click", function () {
+    deleteTransaction(deleteInputValue.value);
+  });
 
   // alternar a opção do botão btnShowExtract entre ocultar / exibir
   if (doNotHideList) {
