@@ -7,10 +7,7 @@ import {
   deleteBtnDiv,
 } from "./index.js";
 import { doNotHideList } from "./postRequest.js";
-import { doNotHideList2 } from "./deleteTransaction.js";
-import { deleteTransaction } from "./deleteTransaction.js";
-
-// export const deleteInputValue = undefined;
+import { doNotHideList2, deleteTransaction } from "./deleteTransaction.js";
 
 export let functionCalled = false; // variável para saber se a função showTransactions foi chamada
 
